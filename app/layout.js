@@ -1,33 +1,36 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Josefin_Sans } from "next/font/google";
 
-import Navigation from "./_components/Navigation";
-import Logo from "./_components/Logo";
-import "./globals.css";
+import Navigation from "@/app/_components/Navigation";
+import Logo from "@/app/_components/Logo";
+import "@/app/_styles/globals.css";
+import Header from "@/app/_components/Header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const josefinSans = Josefin_Sans({
+  variable: "--font-josefin-sans",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata = {
-  title: "The Wild Oasis",
-  description: "Hotel ",
+  // title: "The Wild Oasis",
+  title: {
+    template: "%s / The Wild Oasis",
+    default: "Welcome / The Wild Oasis",
+  },
+  description:
+    "Luxurious cabin hotel, located in the heart of Italian Dolomites, surrounded by beautiful mountains and dark forests",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <header>
-          <Logo />
-          <Navigation />
-        </header>
-        <main>{children}</main>
+      <body
+        className={`${josefinSans.className} bg-primary-950  text-primary-100 min-h-screen flex flex-col antialiased`}
+      >
+        <Header />
+        <div className="flex-1 px-8 py-12">
+          <main className="max-w-7xl bg-red-500 mx-auto">{children}</main>
+        </div>
       </body>
     </html>
   );
