@@ -180,6 +180,7 @@ export async function createBooking(newBooking) {
   return data;
 }
 
+/*
 /////////////
 // UPDATE
 
@@ -226,3 +227,4 @@ export async function deleteBooking(id) {
   }
   return data;
 }
+*/
