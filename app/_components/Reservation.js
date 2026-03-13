@@ -9,7 +9,7 @@ async function Reservation({ cabin }) {
     getBookedDatesByCabinId(cabin.id),
     getSettings(),
   ]);
-  const session = auth();
+  const session = await auth();
 
   return (
     <div className="grid grid-cols-[minmax(700px,_1fr)_minmax(430px,_1fr)] border border-bs-primary-800 min-h-[400px]">
