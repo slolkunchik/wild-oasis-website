@@ -4,7 +4,7 @@
 
 The Wild Oasis Website is a customer-facing platform designed to showcase cabins available for reservation. Users can also manage their accounts, make reservations, and update or delete their bookings. This application enhances the user experience for potential customers looking for vacation rentals.
 
-Here are you can see [the deployed app](https://wild-oasis-website-teal.vercel.app/).
+Here are you can see [the deployed app](https://wild-oasis-website-slol.vercel.app/).
 
 ## Main Features
 
